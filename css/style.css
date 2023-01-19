@@ -1,6 +1,19 @@
-html, body {
-  margin: 0;
-  padding: 0;
+html, body{
+  background-color: rgb(255, 255, 255) ;
+  display: flex;
+  margin: 25px;
+  
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p1{
+  font-size: 20pt;
+}
+p2{
+  font-size: 16pt;
+}
+p3{
+  font-size: 14pt;
 }
 canvas {
   display: block;
