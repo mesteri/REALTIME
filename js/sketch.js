@@ -38,7 +38,7 @@ let bushDetailedOpacity = 11;
 
 
 function setup() {
-  canvas = createCanvas(1300, 768);
+  canvas = createCanvas(1440, 768);
   // SPEECHREC
 
 SpeechRec.start()
@@ -89,71 +89,71 @@ SpeechRec.start()
   grassColorRSlider = createSlider(0, 255, 49, 1);
   grassColorGSlider = createSlider(0, 255, 150, 1);
   grassColorBSlider = createSlider(0, 255, 42, 1);
-  grassColorRSlider.position(1025, 20);
+  grassColorRSlider.position(1225, 290);
   grassColorRSlider.style('width', '255px');
-  grassColorGSlider.position(1025, 40);
+  grassColorGSlider.position(1225, 310);
   grassColorGSlider.style('width', '255px');
-  grassColorBSlider.position(1025, 60);
+  grassColorBSlider.position(1225, 330);
   grassColorBSlider.style('width', '255px');
 
   flowerMarigoldColorRSlider = createSlider(0, 255, 236, 1);
   flowerMarigoldColorGSlider = createSlider(0, 255, 247, 1);
   flowerMarigoldColorBSlider = createSlider(0, 255, 15, 1);
-  flowerMarigoldColorRSlider.position(1025, 100);
+  flowerMarigoldColorRSlider.position(1225, 370);
   flowerMarigoldColorRSlider.style('width', '255px');
-  flowerMarigoldColorGSlider.position(1025, 120);
+  flowerMarigoldColorGSlider.position(1225, 390);
   flowerMarigoldColorGSlider.style('width', '255px');
-  flowerMarigoldColorBSlider.position(1025, 140);
+  flowerMarigoldColorBSlider.position(1225, 410);
   flowerMarigoldColorBSlider.style('width', '255px');
 
   bushSplashColorRSlider = createSlider(0, 255, 33, 1);
   bushSplashColorGSlider = createSlider(0, 255, 222, 1);
   bushSplashColorBSlider = createSlider(0, 255, 22, 1);
-  bushSplashColorRSlider.position(1025, 180);
+  bushSplashColorRSlider.position(1225, 450);
   bushSplashColorRSlider.style('width', '255px');
-  bushSplashColorGSlider.position(1025, 200);
+  bushSplashColorGSlider.position(1225, 470);
   bushSplashColorGSlider.style('width', '255px');
-  bushSplashColorBSlider.position(1025, 220);
+  bushSplashColorBSlider.position(1225, 490);
   bushSplashColorBSlider.style('width', '255px');
 
   bushDetailedColorRSlider = createSlider(0, 255, 111, 1);
   bushDetailedColorGSlider = createSlider(0, 255, 222, 1);
   bushDetailedColorBSlider = createSlider(0, 255, 100, 1);
-  bushDetailedColorRSlider.position(1025, 260);
+  bushDetailedColorRSlider.position(1225, 530);
   bushDetailedColorRSlider.style('width', '255px');
-  bushDetailedColorGSlider.position(1025, 280);
+  bushDetailedColorGSlider.position(1225, 550);
   bushDetailedColorGSlider.style('width', '255px');
-  bushDetailedColorBSlider.position(1025, 300);
+  bushDetailedColorBSlider.position(1225, 570);
   bushDetailedColorBSlider.style('width', '255px');
 
   skyColorRSlider = createSlider(0, 255, 0, 1);
   skyColorGSlider = createSlider(0, 255, 0, 1);
   skyColorBSlider = createSlider(0, 255, 225, 1);
-  skyColorRSlider.position(1025, 340);
+  skyColorRSlider.position(1225, 610);
   skyColorRSlider.style('width', '255px');
-  skyColorGSlider.position(1025, 360);
+  skyColorGSlider.position(1225, 630);
   skyColorGSlider.style('width', '255px');
-  skyColorBSlider.position(1025, 380);
+  skyColorBSlider.position(1225, 650);
   skyColorBSlider.style('width', '255px');
 
   cloudColorRSlider = createSlider(0, 255, 255, 1);
   cloudColorGSlider = createSlider(0, 255, 255, 1);
   cloudColorBSlider = createSlider(0, 255, 255, 1);
-  cloudColorRSlider.position(1025, 420);
+  cloudColorRSlider.position(1225, 690);
   cloudColorRSlider.style('width', '255px');
-  cloudColorGSlider.position(1025, 440);
+  cloudColorGSlider.position(1225, 710);
   cloudColorGSlider.style('width', '255px');
-  cloudColorBSlider.position(1025, 460);
+  cloudColorBSlider.position(1225, 730);
   cloudColorBSlider.style('width', '255px');
 
   waterColorRSlider = createSlider(0, 255, 0, 1);
   waterColorGSlider = createSlider(0, 255, 35, 1);
   waterColorBSlider = createSlider(0, 255, 200, 1);
-  waterColorRSlider.position(1025, 500);
+  waterColorRSlider.position(1225, 770);
   waterColorRSlider.style('width', '255px');
-  waterColorGSlider.position(1025, 520);
+  waterColorGSlider.position(1225, 790);
   waterColorGSlider.style('width', '255px');
-  waterColorBSlider.position(1025, 540);
+  waterColorBSlider.position(1225, 810);
   waterColorBSlider.style('width', '255px');
   
   
@@ -187,9 +187,7 @@ function draw() {
   if (keyIsDown(87)) {
     drawWater(), drawWater(), drawWater(), drawWater();
   } //w
-  if (keyIsDown(81)) {
-    saveThePicture();
-  } //q as SAVE
+  
 }
 
 // ***********************************
@@ -247,11 +245,7 @@ function showResult(){
    drawWater()
     }   
       break
-      
-      case "save":  
-      saveThePicture()
-      break
-  
+       
   }
 }
 
@@ -613,48 +607,42 @@ function bushDetailedBrush() {
 function texts() {
   fill(0);
   noStroke();
-  text('Set the RGB mixer and press /g/ for draw grass', 1025, 10);
+  text('Set the RGB mixer and press /g/ for draw grass', 1175, 10);
   grassColorRGB[0] = grassColorRSlider.value();
   grassColorRGB[1] = grassColorGSlider.value();
   grassColorRGB[2] = grassColorBSlider.value();
 
-  text('Press /m/ for marigolds - ', 1025, 90);
+  text('Press /m/ for flowers - ', 1175, 90);
   flowerMarigoldColorRGB[0] = flowerMarigoldColorRSlider.value();
   flowerMarigoldColorRGB[1] = flowerMarigoldColorGSlider.value();
   flowerMarigoldColorRGB[2] = flowerMarigoldColorBSlider.value();
 
-  text('Press /b for bushes', 1025, 170);
+  text('Press /b for trees', 1175, 170);
   bushSplashColorRGB[0] = bushSplashColorRSlider.value();
   bushSplashColorRGB[1] = bushSplashColorGSlider.value();
   bushSplashColorRGB[2] = bushSplashColorBSlider.value();
 
-  text('Press /d for more detailed bush', 1025, 250);
+  text('Press /d for bushes', 1175, 250);
   bushDetailedColorRGB[0] = bushDetailedColorRSlider.value();
   bushDetailedColorRGB[1] = bushDetailedColorGSlider.value();
   bushDetailedColorRGB[2] = bushDetailedColorBSlider.value();
 
-  text('Press /s for sky', 1025, 330);
+  text('Press /s for sky', 1175, 330);
   skyColorRGB[0] = skyColorRSlider.value();
   skyColorRGB[1] = skyColorGSlider.value();
   skyColorRGB[2] = skyColorBSlider.value();
 
-  text('Press /c for clouds', 1025, 410);
+  text('Press /c for clouds', 1175, 410);
   cloudColorRGB[0] = cloudColorRSlider.value();
   cloudColorRGB[1] = cloudColorGSlider.value();
   cloudColorRGB[2] = cloudColorBSlider.value();
 
-  text('Press /w for water', 1025, 490);
+  text('Press /w for water', 1175, 490);
   waterColorRGB[0] = waterColorRSlider.value();
   waterColorRGB[1] = waterColorGSlider.value();
   waterColorRGB[2] = waterColorBSlider.value();
   
-  text('You can change the colors by sliders', 1025, 590);
-  text('while you hold down the buttons.', 1025, 605);
-  text('Press /q for save your picture.', 1025, 630);
-}
-
-//Save the picture
-
-function saveThePicture() {
-  saveCanvas(canvas, 'myPicture', 'jpg');
+  text('You can change the colors by sliders', 1175, 590);
+  text('while you hold down the buttons.', 1175, 605);
+  
 }
